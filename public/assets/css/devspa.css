@@ -247,7 +247,7 @@ header nav ul li a:hover {
 /* end header  */
 /* start landing  */
 .landing {
-   background: url('../images/background\ hero.jpg') ;
+   background: url('../images/technology-1.jpg') ;
   min-height: 100vh;
   max-width: 100%;
   background-size: cover  ;
@@ -259,7 +259,7 @@ header nav ul li a:hover {
     align-items: center; 
 }
 .landing {
-    background: url('../images/background\ hero.jpg');
+    background: url('../images/technology-1.jpg');
     min-height: 100vh;
     position: relative;
 }
