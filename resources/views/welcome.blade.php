@@ -75,7 +75,7 @@
                     </li>
                 </ul>
             </nav>
-            <div class="lang">
+            {{-- <div class="lang">
                 <i class="fas fa-globe"></i>
                 <select class="lang-select" >
                     <option value="en">English</option>
@@ -83,7 +83,7 @@
                 </select>
                 {{-- <h4>عربي</h4> --}}
                 {{-- <i class="fas fa-chevron-down"></i> --}}
-            </div>
+            {{-- </div>  --}}
         </div>
     </header>
     <!-- end header  -->
