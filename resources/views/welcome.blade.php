@@ -43,6 +43,8 @@
     <link rel="manifest" href="{{ asset('favicons/site.webmanifest') }}">
     <meta name="msapplication-TileImage" content="{{ asset('favicons/favicon-96x96.png') }}">
     <meta name="msapplication-TileColor" content="#00C4FF">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -52,9 +54,9 @@
             {{-- <div class="logo">
                 <img src="{{ asset('assets/images/baytat.png') }}" width="100" height="100" alt="logo">
             </div> --}}
-              <a class="logo py-0" href="#home">
-            <img src="{{ asset('assets/images/baytat2.png') }}" alt="Byatat logo" width="100" height="100">
-        </a>
+            <a class="logo py-0" href="#home">
+                <img src="{{ asset('assets/images/baytat2.png') }}" alt="Byatat logo" width="100" height="100">
+            </a>
             <nav>
                 <i class="fas fa-bars humburger"></i>
                 <ul>
@@ -68,15 +70,19 @@
                         <div class="lan">
                             <i class="fas fa-globe"></i>
                             <h4>عربي</h4>
-                            <!-- <i class="fas fa-chevron-down"></i> -->
+                             <i class="fas fa-chevron-down"></i> 
                         </div>
                     </li>
                 </ul>
             </nav>
             <div class="lang">
                 <i class="fas fa-globe"></i>
-                <h4>عربي</h4>
-                <i class="fas fa-chevron-down"></i>
+                <select class="lang-select" >
+                    <option value="en">English</option>
+                    <option value="ar">عربي</option>
+                </select>
+                {{-- <h4>عربي</h4> --}}
+                {{-- <i class="fas fa-chevron-down"></i> --}}
             </div>
         </div>
     </header>
@@ -89,8 +95,8 @@
                 <p>نحو برمجيات أسرع ... أذكى ... وأكثر ابتكارًا </p>
             </div>
         </div>
-        <button>
-            <a href="https://wa.me/779522898" target="_blank" rel="noopener">
+        <button >
+            <a href="https://wa.me/779522898" target="_blank" rel="noopener"  >
                 تواصل معنا
             </a>
         </button>
@@ -105,7 +111,7 @@
             </div>
         </div>
         <div class="container">
-            <p>في DevSpark، نمزج بين الإبداع والخبرة التقنية لنحوّل أفكارك إلى منتجات رقمية مبهرة. نعمل بشغف على تصميم
+            <p>في Baytat نمزج بين الإبداع والخبرة التقنية لنحوّل أفكارك إلى منتجات رقمية مبهرة. نعمل بشغف على تصميم
                 وتطوير حلول برمجية متكاملة، تجعل حضورك الرقمي أكثر تأثيرًا ونجاحًا.</p>
         </div>
     </div>
@@ -120,21 +126,21 @@
         </div>
         <div class="container">
 
-            <div class="box">
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
                 <img src="{{ asset('assets/images/innovation icon.svg') }}" alt="innovation">
                 <div class="text">
                     <h3>ابتكار مستمر</h3>
                     <p> نبحث دائمًا عن أحدث الحلول </p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box" data-aos="fade-up" data-aos-delay="400">
                 <img src="{{ asset('assets/images/Quality icon.svg') }}" alt="innovation">
                 <div class="text">
                     <h3>جودة مضمونة</h3>
                     <p> تنفيذ احترافي لكل مشروع</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box" data-aos="fade-up" data-aos-delay="500">
                 <img src="{{ asset('assets/images/partnership icon.svg') }}" alt="innovation">
                 <div class="text">
                     <h3>شراكة طويلة الأمد</h3>
@@ -155,28 +161,28 @@
         </div>
         <div class="container">
             <div class="container-service">
-                <div class="card">
+                <div class="card" data-aos="fade-up">
                     <img src="{{ asset('assets/images/web icon.svg') }}" alt="web development">
                     <div class="text">
                         <h3>تطوير الويب</h3>
                         <p>نقدم حلولاً متكاملة لتطوير المواقع</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
                     <img src="{{ asset('assets/images/mobile dev. icon.svg') }}" alt="mobile development">
                     <div class="text">
                         <h3>تطوير التطبيقات</h3>
                         <p>نساعدك في بناء تطبيقات مخصصة</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
                     <img src="{{ asset('assets/images/system dev icon.svg') }}" alt="digital marketing">
                     <div class="text">
                         <h3>التسويق الرقمي</h3>
                         <p>استراتيجيات فعالة لزيادة الوعي بعلامتك التجارية</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
                     <img src="{{ asset('assets/images/support icon.svg') }}" alt="digital marketing">
                     <div class="text">
                         <h3>التسويق الرقمي</h3>
@@ -192,11 +198,11 @@
         <div class="container">
             <div class="main-heading">
                 <div class="address">
-                    <img src="{{ asset('assets/images/contact-with-us icon.svg') }}" alt="contact">
-                    <h2>تواصل معنا</h2>
+                    <img src="{{ asset('assets/images/contact-with-us icon.svg') }}" alt="contact" data-aos="fade-right">
+                    <h2 data-aos="fade-left">تواصل معنا</h2>
                 </div>
             </div>
-            <div class="content">
+            <div class="content" data-aos="fade-right">
                 <form action="">
                     <div class="form-group">
                         <label for="name">الاسم</label>
@@ -265,5 +271,12 @@
     </div>
     <!-- end footer  -->
 </body>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 2000, 
+        once: true 
+    });
+</script>
 
 </html>
