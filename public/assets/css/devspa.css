@@ -247,7 +247,7 @@ header nav ul li a:hover {
 /* end header  */
 /* start landing  */
 .landing {
-   background: url('../images/technology-1.jpg') ;
+   background: url('../images/background hero.jpg') ;
   min-height: 100vh;
   max-width: 100%;
   background-size: cover  ;
@@ -259,7 +259,7 @@ header nav ul li a:hover {
     align-items: center; 
 }
 .landing {
-    background: url('../images/technology-1.jpg');
+    background: url('../images/background hero.jpg');
     min-height: 100vh;
     position: relative;
 }
@@ -460,6 +460,7 @@ header nav ul li a:hover {
 }
 /* end our-values  */
 /* start services  */
+
 .services {
     padding-top: var(--main-padding);
 }
@@ -474,6 +475,13 @@ header nav ul li a:hover {
   align-items: center;
   gap: 10px;
   margin-top: 64px;
+}
+
+
+@keyframes fadeSlide {
+    0% { transform: translate(-50%, -20px); opacity: 0; }
+    10%, 80% { transform: translate(-50%, 0); opacity: 1; }
+    100% { transform: translate(-50%, -20px); opacity: 0; }
 }
 .services .container-service .card {
         position: relative;
@@ -592,6 +600,137 @@ header nav ul li a:hover {
     color: var(--secondary-color);
 }
 /* end services  */
+/* start projects */
+.projects {
+    padding-top: var(--main-padding);
+    background-color: #f9fafb;
+}
+.projects .main-heading .address img {
+    width: 150px;
+    height: auto;
+}
+.container-project {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 64px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* الكارت الأساسي */
+.container-project .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+.container-project .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* صورة المشروع */
+.container-project .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.container-project .card:hover img {
+    transform: scale(1.05);
+}
+
+/* محتوى النص */
+.container-project .text {
+    padding: 20px;
+    text-align: center;
+}
+.container-project .text h3 {
+    font-size: 1.3rem;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+.container-project .text p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* السعر والحالة */
+.container-project .details {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* زر عرض العمل */
+.container-project .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, var(--main-color), var(--secondary-color));
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.4s ease;
+}
+.container-project .btn:hover {
+    background: linear-gradient(90deg, var(--secondary-color), var(--main-color));
+}
+
+/* شريط علوي متدرج */
+.container-project .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--main-color), var(--secondary-color));
+}
+
+/* end projects */
+
+
+
+.toast-message {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 280px;
+    max-width: 90%;
+    background: #4CAF50;
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 9999;
+    opacity: 0;
+    animation: fadeSlide 4s ease forwards;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toast-message.error {
+    background: #F44336;
+}
+
+.toast-message i {
+    font-size: 20px;
+}
 /* start contact */
 .contact {
     padding-top: var(--main-padding);
