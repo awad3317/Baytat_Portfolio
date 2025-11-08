@@ -116,6 +116,7 @@ a {text-decoration: none;
 }
 /* end component */
 /* start header  */
+
 header {
     position: absolute;
     width: 100%;
@@ -123,13 +124,15 @@ header {
 }
 header .container {
    display: flex;
-   justify-content: flex-start;
+   justify-content: space-between; /* بدل flex-start ليترك مساحة للشعار */
    align-items: center;
    position: relative;
+   overflow: visible; /* يمنع القص */
 }
 header .container .logo img {
-    height: 60px;
-    max-width: 100%;
+     display: flex;
+    align-items: center;
+    height: auto; /* يحرر القيود */
 }
 header .container nav {
     flex: 1;
