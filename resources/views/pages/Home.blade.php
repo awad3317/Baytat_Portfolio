@@ -1,8 +1,8 @@
  <div class="landing">
         <div class="hero" id="hero">
             <div class="content">
-                <img src="{{ asset('assets/images/baytat.png') }}" width="500" height="300" alt="hero image">
-                <p data-aos="fade-left" data-aos-delay="300">نحو برمجيات أسرع ... أذكى ... وأكثر ابتكارًا </p>
+                {{-- <img src="{{ asset('assets/images/baytat.png') }}" width="500" height="300" alt="hero image">
+                <p data-aos="fade-left" data-aos-delay="300">نحو برمجيات أسرع ... أذكى ... وأكثر ابتكارًا </p> --}}
             </div>
         </div>
         <button>
