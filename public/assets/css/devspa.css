@@ -249,6 +249,7 @@ header nav ul li a:hover {
 }
 /* end header  */
 /* start landing  */
+
 .landing {
    background: url('../images/homebackgraound.jpg') ;
   min-height: 100vh;
@@ -273,9 +274,11 @@ header nav ul li a:hover {
 }
 @media (max-width: 767px) {
   .landing {
-     background-size: 100% 100%;
+     background-size: cover;
+     background-position: center;
   }
 }
+
 .landing .hero .content {
     position: absolute;
     top: 50% ;
