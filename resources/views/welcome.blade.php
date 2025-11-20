@@ -47,12 +47,22 @@
 
     <!-- Icons -->
     <link rel="icon" type="image/x-icon" href="{{ asset('favicons/favicon.ico') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicons/favicon-16x16.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicons/favicon-32x32.png') }}">
+
+    <!-- SVG Favicon (مدعوم في المتصفحات الحديثة) -->
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicons/favicon.svg') }}">
+
+    <!-- PNG Favicon (96x96) -->
     <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('favicons/favicon-96x96.png') }}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('favicons/web-app-manifest-192x192.png') }}">
+
+    <!-- Apple Touch Icon (iPhone / iPad) -->
     <link rel="apple-touch-icon" href="{{ asset('favicons/apple-touch-icon.png') }}">
+
+    <!-- PWA Manifest -->
     <link rel="manifest" href="{{ asset('favicons/site.webmanifest') }}">
+
+    <!-- Android / Web App Icons (192px + 512px) -->
+    <link rel="icon" sizes="192x192" href="{{ asset('favicons/web-app-manifest-192x192.png') }}">
+    <link rel="icon" sizes="512x512" href="{{ asset('favicons/web-app-manifest-512x512.png') }}">
     <meta name="msapplication-TileImage" content="{{ asset('favicons/favicon-96x96.png') }}">
     <meta name="msapplication-TileColor" content="#00C4FF">
 
