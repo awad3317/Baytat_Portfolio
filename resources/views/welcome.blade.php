@@ -65,7 +65,7 @@
     <link rel="icon" sizes="512x512" href="{{ asset('favicons/web-app-manifest-512x512.png') }}">
     <meta name="msapplication-TileImage" content="{{ asset('favicons/favicon-96x96.png') }}">
     <meta name="msapplication-TileColor" content="#00C4FF">
-
+<meta name="google-site-verification" content="HecNCaLVj3an-KrrJEOeCaHzqbGihvknZc6zPve6n24" />
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
