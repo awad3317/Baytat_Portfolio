@@ -4,36 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baytat Tech Solutions</title>
-    <!-- render all element normally يجعل التصميم متوافق مع جميع المتصفحات -->
+
+    <title>بايتات للحلول التقنية | تطوير تطبيقات – تصميم مواقع – خدمات تقنية</title>
+
+    <!-- normalize -->
     <link rel="stylesheet" href="{{ asset('assets/css/normalize.css') }}">
-    <!-- font awesome library مكتبة ايقونات جاهزة -->
+    <!-- icons -->
     <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
-    <!-- Main tamplate css file -->
+    <!-- template -->
     <link rel="stylesheet" href="{{ asset('assets/css/devspa.css') }}">
-    <!-- google font جلب الخط من قوقل  -->
+
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Cairo:wght@200..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
+    <!-- SEO: Description -->
     <meta name="description"
-        content="شركة بايتات للحلول التقنية شركة سعودية متخصصة في تقديم حلول رقمية مبتكرة تشمل تصميم وتطوير المواقع الإلكترونية والتطبيقات وأنظمة إدارة الأعمال. نرتقي بتجربة عملك إلى مستوى جديد من التقنية.">
+        content="بايتات للحلول التقنية تقدم خدمات تطوير التطبيقات، تصميم وبرمجة المواقع، إنشاء الهويات البصرية، وتصميم واجهات وتجارب المستخدم. حلول تقنية مبتكرة لتحويل أفكارك إلى منتجات رقمية احترافية.">
+
+    <!-- SEO: Keywords -->
     <meta name="keywords"
-        content="بايتات, حلول تقنية, تصميم مواقع, تطوير تطبيقات, برمجة, واجهات مستخدم, UX UI, مواقع احترافية, برمجيات, شركة تقنية سعودية">
+        content="بايتات, تطوير تطبيقات, تصميم مواقع, برمجة مواقع, UI UX, تصميم جرافيك, هوية بصرية, حلول تقنية, شركة تقنية, خدمات رقمية, برمجة تطبيقات, تصاميم احترافية, خدمات تقنية, تكنولوجيا">
+
     <meta name="author" content="Baytat Tech Solutions">
 
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="بايتات للحلول التقنية | تصميم وتطوير المواقع والتطبيقات باحترافية">
+    <meta property="og:title" content="بايتات للحلول التقنية | تطبيقات – مواقع – تصاميم – حلول رقمية">
     <meta property="og:description"
-        content="شركة بايتات تقدم حلول رقمية متكاملة تشمل تصميم وتطوير المواقع والتطبيقات لتطوير أعمالك وتحسين حضورك الرقمي.">
+        content="نحوّل أفكارك إلى مشاريع رقمية: تطوير تطبيقات، برمجة مواقع، تصميمات احترافية، وهويات بصرية. بايتات — التقنية كما يجب أن تكون.">
     <meta property="og:image" content="{{ asset('favicons/favicon-96x96.png') }}">
 
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="بايتات للحلول التقنية | حلول رقمية مبتكرة">
+    <meta name="twitter:title" content="بايتات للحلول التقنية | حلول رقمية متكاملة">
     <meta name="twitter:description"
-        content="شركة بايتات للحلول التقنية تقدم خدمات التصميم، التطوير، والابتكار التقني.">
+        content="تطبيقات، مواقع، تصاميم وهويات بصرية — حلول مبتكرة تلائم الشركات والمشاريع الناشئة.">
+
+    <!-- Icons -->
     <link rel="icon" type="image/x-icon" href="{{ asset('favicons/favicon.ico') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicons/favicon-16x16.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicons/favicon-32x32.png') }}">
@@ -43,9 +55,11 @@
     <link rel="manifest" href="{{ asset('favicons/site.webmanifest') }}">
     <meta name="msapplication-TileImage" content="{{ asset('favicons/favicon-96x96.png') }}">
     <meta name="msapplication-TileColor" content="#00C4FF">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 
 <body>
 
