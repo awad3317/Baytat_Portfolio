@@ -2,7 +2,7 @@
 
         <div class="cont-footer">
             <div class="logo">
-                <img  src="{{ asset('assets/images/baytat1.png') }}" height="100"  alt="logo">
+                <img  src="{{ asset('assets/images/baytat.png') }}" height="100"  alt="logo">
                 <div class="sm-links">
                     <a href="https://www.facebook.com/baytat.sa" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://wa.me/+966557048640" target="_blank"><i class="fab fa-whatsapp"></i></a>

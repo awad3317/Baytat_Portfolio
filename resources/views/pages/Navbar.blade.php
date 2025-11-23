@@ -4,7 +4,7 @@
                 <img src="{{ asset('assets/images/baytat.png') }}" width="100" height="100" alt="logo">
             </div> --}}
             <a class="logo" href="#home">
-                <img src="{{ asset('assets/images/baytat2.png') }}" alt="Byatat logo" width="160" height="100">
+                <img src="{{ asset('assets/images/baytat.png') }}" alt="Byatat logo" width="160" height="100">
             </a>
 
             <nav>
