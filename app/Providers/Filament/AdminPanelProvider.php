@@ -32,9 +32,9 @@ class AdminPanelProvider extends PanelProvider
                 'primary' => Color::Amber,
             ])
             ->login() 
-             ->brandLogo(asset('assets/images/baytat1.png'))
+             ->brandLogo(asset('assets/images/logo-light.jpg'))
             ->brandLogoHeight('6rem')
-            ->darkModeBrandLogo(asset('assets/images/baytat1.png'))
+            ->darkModeBrandLogo(asset('assets/images/baytat.png'))
             ->discoverResources(in: app_path('Filament/Admin/Resources'), for: 'App\Filament\Admin\Resources')
             ->discoverPages(in: app_path('Filament/Admin/Pages'), for: 'App\Filament\Admin\Pages')
             ->pages([

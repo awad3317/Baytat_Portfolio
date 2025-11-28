@@ -17,7 +17,7 @@
                             <h3>{{ $project->title }}</h3>
                             <p>{{ $project->description }}</p>
                             <p><strong>النوع:</strong> {{ $project->type }}</p>
-                            <p><strong>السعر:</strong> {{ number_format($project->price, 2) }} ر.س</p>
+                            {{-- <p><strong>السعر:</strong> {{ number_format($project->price, 2) }} ر.س</p> --}}
                             <p><strong>الحالة:</strong>
                                 @if ($project->status === 'completed')
                                     مكتمل

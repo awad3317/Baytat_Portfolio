@@ -244,102 +244,107 @@ header nav ul li a:hover {
 }
 /* end header  */
 /* start landing  */
-
 .landing {
-   background: url('../images/homebackgraound.jpg') ;
-  background-size: contain; /* يظهر الصورة كاملة */
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
-}
-.landing .hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: flex-end; /* ينزل المحتوى للأسفل حتى لا يغطي الصورة */
-  justify-content: center;
-  text-align: center;
-  padding-bottom: 40px;
-}
-.landing {
-    background: url('../images/homebackgraound.jpg');
+    background: url('../images/background hero.jpg') no-repeat center center;
+    background-size: cover;
     min-height: 100vh;
+    width: 100%;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-@media (min-width: 992px) {
-    .landing {
-        background-size: 100% 100%;
-    } 
+
+/* طبقة شفافة اختيارية لمزيد من الوضوح */
+.landing::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.2);
+    z-index: 0;
 }
-@media (max-width: 767px) {
-  .landing {
-     background-size: cover;
-     background-position: center;
-  }
+
+.landing .hero {
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
 }
 
 .landing .hero .content {
-      position: static;
-    transform: none;
-    padding: 20px;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
 }
+
+/* الصورة أو اللوجو */
 .landing .hero .content img {
-    max-width:100%; 
+    width: 100%;
+    max-width: 600px;
 }
-@media (max-width: 767px) {
-    .landing .hero .content img {
-        max-width: 100%;
-    }
-}
+
+/* النص */
 .landing .hero .content p {
-    color: var(--third-color);
-    font-size: 30px;
+    color: white;
+    font-size: 28px;
     text-align: center;
-    margin-bottom: 0;
+    line-height: 1.6;
 }
-@media (max-width: 767px) {
-    .landing .hero .content p {
-        max-width: 100%;
-        padding: 20px;
-        font-size: 30px;
-        line-height: 1.8;
-    }
+
+/* زر التواصل */
+.landing .hero .cta-btn {
+    margin-top: 30px;
 }
-.landing button a {
-    position: absolute;
-    left: 50%;
-    bottom: 70px;
+
+.landing .hero .cta-btn a {
+    display: inline-block;
+    padding: 15px 40px;
     background-color: var(--third-color);
     color: var(--main-color);
-    transform: translateX(-50%);
-    padding: 20px 80px;
-    border-radius: 8px;
-    font-size: 25px;
-    border-style: none;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    transition: var(--main-transition);
-    -webkit-transition: var(--main-transition);
-    -moz-transition: var(--main-transition);
-    -ms-transition: var(--main-transition);
-    -o-transition: var(--main-transition);
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
 }
-@media (max-width: 767px) {
-    .landing button a {
-        padding: 20px 60px;
-        font-size: 20px;
-    }
-}
-.landing button a:hover {
+
+/* Hover */
+.landing .hero .cta-btn a:hover {
     background-color: var(--secondary-color);
     color: var(--third-color);
 }
+
+/* الموبايل */
+@media (max-width: 767px) {
+    .landing {
+        background-position: center;
+    }
+
+    .landing .hero .content img {
+        max-width: 90%;
+    }
+
+    .landing .hero .content p {
+        font-size: 20px;
+    }
+
+    .landing .hero .cta-btn a {
+        font-size: 18px;
+        padding: 12px 30px;
+    }
+}
+
+/* التابلت */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .landing .hero .content img {
+        max-width: 70%;
+    }
+
+    .landing .hero .content p {
+        font-size: 24px;
+    }
+}
+
 /* end landing  */
 /* start about  */
 .about {

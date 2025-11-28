@@ -2,6 +2,7 @@
 
 namespace App\Filament\Admin\Resources\Orders\Tables;
 
+use Dom\Text;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -24,6 +25,10 @@ class OrdersTable
                 TextColumn::make('email')
                     ->label('البريد الإلكتروني')
                     ->searchable(),
+                    TextColumn::make('message')
+                    ->label('الرسالة')
+                    ->limit(50)
+                    ->wrap(),
                 TextColumn::make('created_at')
                     ->label('تاريخ الإنشاء')
                     ->dateTime()

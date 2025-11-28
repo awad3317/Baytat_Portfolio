@@ -21,10 +21,7 @@ class UsersTable
                 TextColumn::make('email')
                     ->label('البريد الإلكتروني')
                     ->searchable(),
-                TextColumn::make('email_verified_at')
-                    ->label('تاريخ التحقق من البريد الإلكتروني')
-                    ->dateTime()
-                    ->sortable(),
+               
                 TextColumn::make('created_at')
                     ->label('تاريخ الإنشاء')
                     ->dateTime()

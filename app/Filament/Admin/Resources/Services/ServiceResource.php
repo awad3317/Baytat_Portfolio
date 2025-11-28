@@ -17,13 +17,13 @@ use Filament\Tables\Table;
 class ServiceResource extends Resource
 {
     protected static ?string $model = Service::class;
-     protected static ?string $navigationLabel = 'خدمات العمل';
+     protected static ?string $navigationLabel = 'الخدمات';
     protected static ?string $modelLabel = 'انشئ خدمة';
-    protected static ?string $pluralModelLabel = 'خدمات العمل';
+    protected static ?string $pluralModelLabel = 'خدمتنا';
 
 
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Briefcase;
 
     public static function form(Schema $schema): Schema
     {

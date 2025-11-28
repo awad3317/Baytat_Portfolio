@@ -19,18 +19,14 @@ class Project extends Model
         'status',
     ];
 
-    public function order()
-    {
-        return $this->belongsTo(Order::class);
-    }
 
     public function service()
     {
         return $this->belongsTo(Service::class);
     }
 
-    public function projects()
+    public function orders()
     {
-        return $this->belongsToMany(Project::class, 'developer_project');
+        return $this->hasMany(Order::class);
     }
 }

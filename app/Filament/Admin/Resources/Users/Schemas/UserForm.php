@@ -19,8 +19,7 @@ class UserForm
                     ->label('البريد الإلكتروني')
                     ->email()
                     ->required(),
-                DateTimePicker::make('email_verified_at')
-                    ->label('تاريخ التحقق من البريد الإلكتروني'),
+              
                 TextInput::make('password')
                     ->label('كلمة المرور')
                     ->password()

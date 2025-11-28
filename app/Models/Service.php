@@ -8,7 +8,7 @@ class Service extends Model
 {
     protected $fillable = ['name', 'description', 'icon_service' ];
 
-    public function orders()
+   public function orders()
     {
         return $this->hasMany(Order::class);
     }

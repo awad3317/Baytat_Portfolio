@@ -17,17 +17,20 @@ class ProjectsTable
     {
         return $table
             ->columns([
-                TextColumn::make('title')
-                
-                    ->searchable(),
-                TextColumn::make('type')
-                    ->searchable(),
-                TextColumn::make('link')
-                    ->searchable(),
-                ImageColumn::make('image')
+                   ImageColumn::make('image')
                 ->label('الصورة')
                 ->circular(),
            
+                TextColumn::make('title')
+                    ->label('العنوان')
+                    ->searchable(),
+                TextColumn::make('type')
+                    ->label('النوع')
+                    ->searchable(),
+                TextColumn::make('link')
+                    ->label('الرابط')
+                    ->searchable(),
+             
                 TextColumn::make('service.name')
                     ->label('الخدمة')
                     ->sortable()

@@ -21,7 +21,7 @@ class ProjectResource extends Resource
     protected static ?string $modelLabel = 'انشئ مشروع';
     protected static ?string $pluralModelLabel = 'المشاريع';
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::RectangleStack;
 
     public static function form(Schema $schema): Schema
     {
