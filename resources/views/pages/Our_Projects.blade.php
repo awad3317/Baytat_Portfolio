@@ -3,7 +3,7 @@
     <div class="main-heading">
         <div class="address">
             <h2 data-aos="fade-left">أعمالنا</h2>
-            <img src="{{ asset('storage/our service icon.svg') }}" alt="projects" data-aos="fade-right">
+            <img src="{{ asset('assets/images/our service icon.svg') }}" alt="projects" data-aos="fade-right">
         </div>
     </div>
 
