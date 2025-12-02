@@ -3,7 +3,7 @@
     <div class="main-heading">
         <div class="address">
             <h2 data-aos="fade-left">أعمالنا</h2>
-            <img src="{{ asset('assets/images/our service icon.svg') }}" alt="projects" data-aos="fade-right">
+            <img src="{{ asset('storage/our service icon.svg') }}" alt="projects" data-aos="fade-right">
         </div>
     </div>
 
@@ -12,7 +12,7 @@
             @if (!empty($projects) && count($projects) > 0)
                 @foreach ($projects as $project)
                     <div class="card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="{{ asset('assets/images/' . $project->image) }}" alt="{{ $project->title }}">
+                        <img src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
                         <div class="text">
                             <h3>{{ $project->title }}</h3>
                             <p>{{ $project->description }}</p>
