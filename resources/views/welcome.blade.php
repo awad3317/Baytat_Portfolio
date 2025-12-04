@@ -80,6 +80,15 @@
 </head>
 
 
+<style>
+    body {
+        background-image: url('{{ asset('assets/images/test.jpg') }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* اختياري */
+    }
+</style>
 <body>
 
     <!-- start header  -->
