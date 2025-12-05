@@ -1,29 +1,30 @@
-<!-- start our projects  -->
+
 <div class="projects" id="projects">
     <div class="main-heading">
         <div class="address">
             <h2 data-aos="fade-left">أعمالنا</h2>
-            <img src="{{ asset('assets/images/our service icon.svg') }}" alt="أعمالنا" data-aos="fade-right">
+            <img src="{{ asset('assets/images/our service icon.svg') }}" alt="projects" data-aos="fade-right">
         </div>
     </div>
 
     <div class="container">
-        <div class="container-services">
+        <div class="container-project">
             @if (!empty($projects) && count($projects) > 0)
                 @foreach ($projects as $project)
-                    <div class="card" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
+                    <div class="card" data-aos="fade-up" data-aos-delay="300">
                         <img src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
                         <div class="text">
                             <h3>{{ $project->title }}</h3>
-                            <p>{{ Str::limit($project->description, 120) }}</p>
+                            <p>{{ $project->description }}</p>
                             <p><strong>النوع:</strong> {{ $project->type }}</p>
+                            {{-- <p><strong>السعر:</strong> {{ number_format($project->price, 2) }} ر.س</p> --}}
                             <p><strong>الحالة:</strong>
                                 @if ($project->status === 'completed')
-                                    <span class="status completed">مكتمل</span>
+                                    مكتمل
                                 @elseif($project->status === 'in_progress')
-                                    <span class="status in-progress">قيد التنفيذ</span>
+                                    قيد التنفيذ
                                 @else
-                                    <span class="status unknown">غير محدد</span>
+                                    غير محدد
                                 @endif
                             </p>
                             @if ($project->link)
@@ -33,8 +34,8 @@
                     </div>
                 @endforeach
             @else
-                <div class="no-projects">
-                    <div class="alert" role="alert">
+                <div class="col-12 text-center py-5">
+                    <div class="alert alert-info" role="alert">
                         <i class="fas fa-info-circle me-2"></i> لا توجد أعمال متاحة حالياً
                     </div>
                 </div>
@@ -42,4 +43,3 @@
         </div>
     </div>
 </div>
-<!-- end our projects  -->
