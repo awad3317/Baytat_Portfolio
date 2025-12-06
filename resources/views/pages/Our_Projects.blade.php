@@ -12,7 +12,7 @@
             @if (!empty($projects) && count($projects) > 0)
                 @foreach ($projects as $project)
                     <div class="card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
+                        <img src="{{ Storage::url($project->image) }}" alt="{{ $project->title }}">
                         <div class="text">
                             <h3>{{ $project->title }}</h3>
                             <p>{{ $project->description }}</p>
