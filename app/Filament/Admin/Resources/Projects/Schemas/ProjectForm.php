@@ -24,7 +24,9 @@ class ProjectForm
                 TextInput::make('link')
                     ->required(),
                 FileUpload::make('image')
-                    ->image(),
+                    ->image()
+                    ->directory('uploads/images')
+                    ->visibility('public'),
                 TextInput::make('service_id')
                     ->required()
                     ->numeric(),
