@@ -3,25 +3,24 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6NQE76SZ2N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6NQE76SZ2N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-6NQE76SZ2N');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6NQE76SZ2N');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>بايتات للحلول التقنية | تطوير تطبيقات – تصميم مواقع – خدمات تقنية</title>
 
-    <!-- normalize -->
-    <link rel="stylesheet" href="{{ asset('assets/css/normalize.css') }}">
-    <!-- icons -->
+    <!-- SVG Icons -->
     <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
-    <!-- template -->
-    <link rel="stylesheet" href="{{ asset('assets/css/devspa.css') }}">
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,22 +73,16 @@
     <link rel="icon" sizes="512x512" href="{{ asset('favicons/web-app-manifest-512x512.png') }}">
     <meta name="msapplication-TileImage" content="{{ asset('favicons/favicon-96x96.png') }}">
     <meta name="msapplication-TileColor" content="#00C4FF">
-<meta name="google-site-verification" content="HecNCaLVj3an-KrrJEOeCaHzqbGihvknZc6zPve6n24" />
+    <meta name="google-site-verification" content="HecNCaLVj3an-KrrJEOeCaHzqbGihvknZc6zPve6n24" />
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind CSS (Vite) -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 
-<style>
-    body {
-        background-image: url('{{ asset('assets/images/test.jpg') }}');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed; /* اختياري */
-    }
-</style>
-<body>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased overflow-x-hidden min-h-screen flex flex-col">
 
     <!-- start header  -->
     @include('pages.Navbar')
@@ -97,10 +90,25 @@
     <!-- end header  -->
     <!-- start landing -->
     @if (session('success') || session('error'))
-        <div class="toast-message {{ session('success') ? 'success' : 'error' }}">
-            <i class="fas {{ session('success') ? 'fa-check-circle' : 'fa-exclamation-circle' }}"></i>
-            <span>{{ session('success') ?? session('error') }}</span>
+        <div id="toast-message"
+            class="fixed top-24 left-1/2 -translate-x-1/2 z-[100] flex items-center gap-3 px-6 py-4 rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.5)] bg-slate-900 border {{ session('success') ? 'border-emerald-500/30' : 'border-rose-500/30' }} transition-all duration-500 transform translate-y-0 opacity-100">
+            <div
+                class="{{ session('success') ? 'bg-emerald-100 text-emerald-600' : 'bg-rose-100 text-rose-600' }} rounded-full p-2 flex items-center justify-center">
+                <i class="fas {{ session('success') ? 'fa-check' : 'fa-exclamation' }}"></i>
+            </div>
+            <span
+                class="font-sans font-bold text-slate-800 text-sm">{{ session('success') ?? session('error') }}</span>
         </div>
+        <script>
+            setTimeout(() => {
+                const toast = document.getElementById('toast-message');
+                if (toast) {
+                    toast.classList.remove('translate-y-0', 'opacity-100');
+                    toast.classList.add('-translate-y-10', 'opacity-0');
+                    setTimeout(() => toast.remove(), 500);
+                }
+            }, 4000);
+        </script>
     @endif
     <!-- start home -->
     @include('pages.Home')
@@ -130,8 +138,10 @@
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
     AOS.init({
-        duration: 2000,
-        once: true
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 50,
     });
 </script>
 
